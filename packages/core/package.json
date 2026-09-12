@@ -1,0 +1,15 @@
+{
+  "name": "@rich-i18n/core",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "scripts": {
+    "build": "tsdown src/index.ts --dts --clean"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "tsdown": "^0.23.0"
+  }
+}
