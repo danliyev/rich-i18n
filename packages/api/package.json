@@ -1,11 +1,37 @@
 {
   "name": "@rich-i18n/api",
-  "private": true,
+  "description": "High-level API for rich-text localization library",
   "type": "module",
   "main": "dist/index.mjs",
   "types": "dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsdown src/index.ts --dts --clean"
+  },
+  "keywords": [
+    "i18n",
+    "localization",
+    "rich-text",
+    "translation"
+  ],
+  "author": "Daniyar Kurmangaliyev <dan.liyev1@gmail.com>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danliyev/rich-i18n.git",
+    "directory": "packages/api"
+  },
+  "homepage": "https://github.com/danliyev/rich-i18n#readme",
+  "bugs": {
+    "url": "https://github.com/danliyev/rich-i18n/issues"
   },
   "dependencies": {
     "@rich-i18n/core": "workspace:^"
@@ -13,5 +39,11 @@
   "devDependencies": {
     "@types/node": "^22.20.2",
     "tsdown": "^0.23.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "provenance": true
   }
 }
